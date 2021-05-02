@@ -48,7 +48,7 @@
 				$payment_date=date('Y-m-d'); 
 				$_SESSION['payment_date']=$payment_date;
 				$_SESSION['select_parking'] = $parking_no;
-
+				$days_no = $_POST['no_of_days'];
 
 				require_once('Database Connection file/mysqli_connect.php');
 				
@@ -62,7 +62,7 @@
 				
 				mysqli_stmt_close($stmt);
 				mysqli_close($dbc);
-				$total_ticket_price=$ticket_price;
+				$total_ticket_price=$ticket_price *$days_no;
 				
 				
 				$total_amount=$total_ticket_price;

@@ -78,6 +78,18 @@
         						</tr>";
     						}
     						echo "</table> <br>";
+
+?>
+<table cellpadding="5">
+				<tr>
+					<td class="fix_table">Enter the No. of Days</td>
+				</tr>
+				<tr>
+					<td class="fix_table"><input type="number" name="no_of_days" placeholder="Eg. 2" required></td>
+				</tr>
+			</table>
+ <?php
+
     						echo "<input type=\"submit\" value=\"Select Spot\" name=\"Select\">";
     						echo "</form>";
     					//}
@@ -89,5 +101,8 @@
 					// 	echo mysqli_error();
 					// }
 		?>
+		
+
+
 	</body>
 </html>
