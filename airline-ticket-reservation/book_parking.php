@@ -9,6 +9,9 @@
 			<link rel="stylesheet" type="text/css" href="main.css"/>
 		<link rel="stylesheet" href="font-awesome-4.7.0\css\font-awesome.min.css">
 		<style>
+			a{
+				font-size:25px;	
+			}
 		*{
 				text-align:center;
 		}
@@ -56,7 +59,7 @@
 
 					require_once('Database Connection file/mysqli_connect.php');
 					
-						$query="SELECT spot_no,type,price,available FROM parking_details";
+						$query="SELECT spot_no,type,price,available FROM parking_details where available = 1";
 						
 						$result = mysqli_query($dbc, $query);
 
